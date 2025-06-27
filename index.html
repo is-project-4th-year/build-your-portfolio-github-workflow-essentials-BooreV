@@ -5,23 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Victor Boore Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gradient-to-br from-gray-100 to-blue-50 text-gray-800 font-sans">
 
   <!-- Navbar -->
   <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <h1 class="text-2xl font-bold text-blue-600">Victor Boore</h1>
+      <h1 class="text-2xl font-extrabold text-blue-600 tracking-tight">Victor Boore</h1>
       <button id="menu-toggle" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
       <nav id="nav-links" class="hidden md:flex space-x-6 text-lg font-medium">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#projects" class="hover:text-blue-600">Projects</a>
-        <a href="#skills" class="hover:text-blue-600">Skills</a>
+        <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+        <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
+        <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
       </nav>
     </div>
     <!-- Mobile Nav -->
@@ -32,124 +37,116 @@
     </div>
   </header>
 
-  <!-- Spacer for fixed navbar -->
+  <!-- Spacer -->
   <div class="h-20"></div>
 
   <!-- Hero Section -->
-  <section class="bg-white py-20 shadow-sm">
-    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-      <div class="md:w-1/2 mb-10 md:mb-0">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+  <section class="py-24 bg-gradient-to-tr from-white to-blue-100 shadow-inner">
+    <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between">
+      <div class="md:w-1/2 mt-10 md:mt-0">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 text-gray-900">
           Hi, I'm <span class="text-blue-600">Victor Boore</span>
         </h1>
-        <p class="text-lg mb-6">
-          A passionate Computer Science student focused on building impactful digital solutions.
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+          A passionate Computer Science student focused on building impactful digital solutions that shape the future.
         </p>
-        <a href="#about" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
+        <a href="#about" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-medium shadow-lg hover:bg-blue-700 transition">
           Learn More About Me
         </a>
       </div>
       <div class="md:w-1/2">
-        <img src="https://source.unsplash.com/featured/?technology,developer" alt="Hero Image" class="rounded-lg shadow-lg" />
+        <img src="https://source.unsplash.com/featured/?technology,developer" alt="Hero Image" class="rounded-xl shadow-xl hover:shadow-2xl transition duration-300" />
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
-      <p class="text-lg mb-4">
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl text-center">
+      <h2 class="text-3xl font-bold mb-6 text-blue-700">About Me</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
         I'm a fourth-year Informatics and Computer Science student at Kenya Commercial Bank's tech internship program, where I’ve been developing web-based applications using modern tools like Spring Boot, PostgreSQL, and Docker.
       </p>
-      <p class="text-lg mb-4">
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
         My key interest lies in backend development, data analytics, and building intelligent systems that solve real-world problems. I’m currently working on <strong>AfyaLink</strong>, a smart healthcare platform that predicts Tuberculosis from chest X-rays using deep learning.
       </p>
-      <p class="text-lg">
+      <p class="text-lg text-gray-700 leading-relaxed">
         I’m a strong believer in clean code, continuous learning, and building solutions that matter. When I’m not coding, I enjoy reading, playing chess, and exploring emerging technologies.
       </p>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-white">
+  <section id="projects" class="py-20 bg-gray-100">
     <div class="container mx-auto px-6 max-w-6xl">
-      <h2 class="text-3xl font-bold mb-12 text-center">Projects</h2>
+      <h2 class="text-3xl font-bold mb-12 text-center text-blue-700">Projects</h2>
       <div class="grid md:grid-cols-3 gap-8">
-
-        <!-- Project 1 -->
-        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">AfyaLink</h3>
+        <!-- Project Card -->
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300 border border-gray-200">
+          <h3 class="text-xl font-semibold mb-2 text-blue-600">AfyaLink</h3>
           <p class="text-gray-700 mb-4">
             A smart healthcare assistant that uses CNNs to predict Tuberculosis from chest X-rays. Built with Python, Flask, and TensorFlow.
           </p>
-          <a href="#" class="text-blue-600 hover:underline">View Project</a>
+          <a href="#" class="text-blue-600 hover:underline font-medium">View Project</a>
         </div>
 
-        <!-- Project 2 -->
-        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">User Management System</h3>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300 border border-gray-200">
+          <h3 class="text-xl font-semibold mb-2 text-blue-600">User Management System</h3>
           <p class="text-gray-700 mb-4">
             Spring Boot REST API with JWT authentication, PostgreSQL integration, and Dockerized deployment for secure user management.
           </p>
-          <a href="#" class="text-blue-600 hover:underline">View Project</a>
+          <a href="#" class="text-blue-600 hover:underline font-medium">View Project</a>
         </div>
 
-        <!-- Project 3 -->
-        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">E-Commerce Dashboard</h3>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300 border border-gray-200">
+          <h3 class="text-xl font-semibold mb-2 text-blue-600">E-Commerce Dashboard</h3>
           <p class="text-gray-700 mb-4">
             Interactive admin dashboard built with React, Tailwind, and Chart.js to monitor sales, orders, and inventory in real-time.
           </p>
-          <a href="#" class="text-blue-600 hover:underline">View Project</a>
+          <a href="#" class="text-blue-600 hover:underline font-medium">View Project</a>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <h2 class="text-3xl font-bold mb-12 text-center">Skills</h2>
-
-      <div class="grid md:grid-cols-2 gap-10 text-lg">
-        <!-- Programming Languages -->
+  <section id="skills" class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <h2 class="text-3xl font-bold mb-12 text-center text-blue-700">Skills</h2>
+      <div class="grid md:grid-cols-2 gap-10 text-lg text-gray-700">
+        <!-- Group 1 -->
         <div>
-          <h3 class="font-semibold text-xl mb-3">Programming Languages</h3>
-          <ul class="list-disc list-inside text-gray-700">
+          <h3 class="font-semibold text-xl mb-3 text-gray-900">Programming Languages</h3>
+          <ul class="list-disc list-inside space-y-1">
             <li>Python</li>
             <li>Java</li>
             <li>JavaScript</li>
             <li>SQL</li>
           </ul>
         </div>
-
-        <!-- Frameworks & Tools -->
+        <!-- Group 2 -->
         <div>
-          <h3 class="font-semibold text-xl mb-3">Frameworks & Tools</h3>
-          <ul class="list-disc list-inside text-gray-700">
+          <h3 class="font-semibold text-xl mb-3 text-gray-900">Frameworks & Tools</h3>
+          <ul class="list-disc list-inside space-y-1">
             <li>Spring Boot & Hibernate</li>
             <li>React & Tailwind CSS</li>
             <li>PostgreSQL & MongoDB</li>
             <li>Docker & Git</li>
           </ul>
         </div>
-
-        <!-- Machine Learning -->
+        <!-- Group 3 -->
         <div>
-          <h3 class="font-semibold text-xl mb-3">Machine Learning</h3>
-          <ul class="list-disc list-inside text-gray-700">
+          <h3 class="font-semibold text-xl mb-3 text-gray-900">Machine Learning</h3>
+          <ul class="list-disc list-inside space-y-1">
             <li>TensorFlow & Keras</li>
             <li>Scikit-learn</li>
             <li>Pandas & NumPy</li>
           </ul>
         </div>
-
-        <!-- Soft Skills -->
+        <!-- Group 4 -->
         <div>
-          <h3 class="font-semibold text-xl mb-3">Soft Skills</h3>
-          <ul class="list-disc list-inside text-gray-700">
+          <h3 class="font-semibold text-xl mb-3 text-gray-900">Soft Skills</h3>
+          <ul class="list-disc list-inside space-y-1">
             <li>Agile & Solo Development</li>
             <li>Problem Solving</li>
             <li>Communication & Teamwork</li>
@@ -160,7 +157,7 @@
     </div>
   </section>
 
-  <!-- Script to toggle mobile menu -->
+  <!-- Toggle mobile nav -->
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('mobile-menu');
