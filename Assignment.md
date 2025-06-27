@@ -2,51 +2,64 @@
 
 ## 1. Student Details
 
-- **Full Name**:
-- **GitHub Username**:
-- **Email**:
+| Field            | Information                    |
+|------------------|--------------------------------|
+| **Full Name**    | Victor Boore                   |
+| **GitHub Username** | `victor-boore`                 |
+| **Email**        | victor.boore@strathmore.edu       |
+| **Admission Number**        | 151169        |
+
+---
 
 ## 2. Deployed Portfolio Link
 
-- **GitHub Pages URL**:  
-  _(Provide the live link to your deployed portfolio website)_
+- **GitHub Pages URL**: <https://victorboore.github.io/portfolio>
+
+---
 
 ## 3. Learnings from the Git Crash Program
 
-List at least **four key concepts or skills** you learned during the Git crash course. For each one, write a brief explanation of how it helped you manage your portfolio project more effectively.
+| Key Concept | How it Helped My Portfolio Project |
+|-------------|------------------------------------|
+| **Branching** | Allowed me to develop each section (Hero, About, Projects, Skills) in isolated feature branches, preventing code conflicts and keeping `main` stable. |
+| **Pull Requests & Code Reviews** | Made it easy to request feedback from peers before merging; ensured every change was tested and approved, improving overall code quality. |
+| **GitHub Actions / Workflows** | Automated the build-and-deploy pipeline: every push to `main` triggers a workflow that installs dependencies, runs a simple build check, and publishes the site to GitHub Pages—no manual deployment needed. |
+| **Issues & Milestones** | Helped me break the portfolio into manageable tasks (navigation bar, responsive layout, styling polish), link them to a milestone, and track progress transparently. |
+| **Project Board (Kanban)** | Visualised task flow (To Do → In Progress → Done), kept me focused on one feature at a time, and provided a clear overview of project status at a glance. |
 
-Example format:
-
-- **Branching**: Helped me separate features and prevent conflicts when working on different sections of the site.
-- _(Continue with other concepts…)_
+---
 
 ## 4. Screenshots of Key GitHub Features
 
-Include screenshots that demonstrate how you used GitHub to manage your project. For each screenshot, write a short caption explaining what it shows.
-
-> Upload the screenshots to your GitHub repository and reference them here using Markdown image syntax:
-> (you could just simply copy and paste the image into the Assignment.md)
-
-```markdown
-![Caption](path/to/your/image.png)
-```
+> The images are stored in the `images/` directory of the repository.
 
 ### A. Milestones and Issues
 
-- Screenshot showing your milestone(s) and the issues linked to it.
+| Screenshot | Caption |
+|------------|---------|
+| ![Milestones](images/milestones.png) | Active milestone aggregating all tasks needed for the first public release of the portfolio. |
+| ![Closed Issues](images/closed_issues.png) | List of closed issues showing features completed and bugs fixed for v1.0. |
 
 ### B. Project Board
 
-- Screenshot of your GitHub Project Board with issues organized into columns (e.g., To Do, In Progress, Done).
+| Screenshot | Caption |
+|------------|---------|
+| ![Project Board](images/projects_dashboard.png) | Kanban board with columns **To Do**, **In Progress**, and **Done**; each card is linked to an issue. |
 
 ### C. Branching
 
-- Screenshot showing your branch list with meaningful naming.
+| Screenshot | Caption |
+|------------|---------|
+| ![Branches](images/branches.png) | Meaningfully named branches like `feat/navbar`, `feat/responsive-layout`, and `fix/image-paths` to separate work streams. |
 
 ### D. Pull Requests
 
-- Screenshot of a pull request that’s either open or merged and linked to a related issue.
+| Screenshot | Caption |
+|------------|---------|
+| ![Pull Requests](images/pull_requests.png) | Example PR showing automated checks (GitHub Actions) passing before merge into `main`. |
 
 ### E. Merge Conflict Resolution
 
-- Screenshot of a resolved merge conflict (in a pull request, commit history, or your local terminal/GitHub Desktop).
+> *No merge conflicts occurred during this iteration; all PRs merged cleanly thanks to disciplined branching and small, focused commits.* If a conflict arises in future work, I will document the resolution steps and include a screenshot here.
+
+---
