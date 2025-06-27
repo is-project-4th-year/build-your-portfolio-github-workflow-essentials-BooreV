@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">'
-      <script src="https://cdn.tailwindcss.com"></script>
-'
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victor Boore Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-      <section class="bg-white py-20 shadow-sm">
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <h1 class="text-2xl font-bold text-blue-600">Victor Boore</h1>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <nav id="nav-links" class="hidden md:flex space-x-6 text-lg font-medium">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#skills" class="hover:text-blue-600">Skills</a>
+      </nav>
+    </div>
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white">
+      <a href="#about" class="block text-lg hover:text-blue-600">About</a>
+      <a href="#projects" class="block text-lg hover:text-blue-600">Projects</a>
+      <a href="#skills" class="block text-lg hover:text-blue-600">Skills</a>
+    </div>
+  </header>
+
+  <!-- Spacer for fixed navbar -->
+  <div class="h-20"></div>
+
+  <!-- Hero Section -->
+  <section class="bg-white py-20 shadow-sm">
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
       <div class="md:w-1/2 mb-10 md:mb-0">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">
@@ -27,7 +55,8 @@
     </div>
   </section>
 
-    <section id="about" class="py-20 bg-gray-50">
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6 max-w-4xl">
       <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
       <p class="text-lg mb-4">
@@ -43,94 +72,102 @@
   </section>
 
   <!-- Projects Section -->
-<section id="projects" class="py-20 bg-white">
-  <div class="container mx-auto px-6 max-w-6xl">
-    <h2 class="text-3xl font-bold mb-12 text-center">Projects</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      
-      <!-- Project 1 -->
-      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">AfyaLink</h3>
-        <p class="text-gray-700 mb-4">
-          A smart healthcare assistant that uses CNNs to predict Tuberculosis from chest X-rays. Built with Python, Flask, and TensorFlow.
-        </p>
-        <a href="#" class="text-blue-600 hover:underline">View Project</a>
-      </div>
-      
-      <!-- Project 2 -->
-      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">User Management System</h3>
-        <p class="text-gray-700 mb-4">
-          Spring Boot REST API with JWT authentication, PostgreSQL integration, and Dockerized deployment for secure user management.
-        </p>
-        <a href="#" class="text-blue-600 hover:underline">View Project</a>
-      </div>
-      
-      <!-- Project 3 -->
-      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">E-Commerce Dashboard</h3>
-        <p class="text-gray-700 mb-4">
-          Interactive admin dashboard built with React, Tailwind, and Chart.js to monitor sales, orders, and inventory in real-time.
-        </p>
-        <a href="#" class="text-blue-600 hover:underline">View Project</a>
-      </div>
+  <section id="projects" class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <h2 class="text-3xl font-bold mb-12 text-center">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
 
-    </div>
-  </div>
-</section>
+        <!-- Project 1 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">AfyaLink</h3>
+          <p class="text-gray-700 mb-4">
+            A smart healthcare assistant that uses CNNs to predict Tuberculosis from chest X-rays. Built with Python, Flask, and TensorFlow.
+          </p>
+          <a href="#" class="text-blue-600 hover:underline">View Project</a>
+        </div>
 
-<!-- Skills Section -->
-<section id="skills" class="py-20 bg-gray-50">
-  <div class="container mx-auto px-6 max-w-4xl">
-    <h2 class="text-3xl font-bold mb-12 text-center">Skills</h2>
-    
-    <div class="grid md:grid-cols-2 gap-10 text-lg">
-      <!-- Programming Languages -->
-      <div>
-        <h3 class="font-semibold text-xl mb-3">Programming Languages</h3>
-        <ul class="list-disc list-inside text-gray-700">
-          <li>Python</li>
-          <li>Java</li>
-          <li>JavaScript</li>
-          <li>SQL</li>
-        </ul>
-      </div>
+        <!-- Project 2 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">User Management System</h3>
+          <p class="text-gray-700 mb-4">
+            Spring Boot REST API with JWT authentication, PostgreSQL integration, and Dockerized deployment for secure user management.
+          </p>
+          <a href="#" class="text-blue-600 hover:underline">View Project</a>
+        </div>
 
-      <!-- Frameworks & Tools -->
-      <div>
-        <h3 class="font-semibold text-xl mb-3">Frameworks & Tools</h3>
-        <ul class="list-disc list-inside text-gray-700">
-          <li>Spring Boot & Hibernate</li>
-          <li>React & Tailwind CSS</li>
-          <li>PostgreSQL & MongoDB</li>
-          <li>Docker & Git</li>
-        </ul>
-      </div>
+        <!-- Project 3 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">E-Commerce Dashboard</h3>
+          <p class="text-gray-700 mb-4">
+            Interactive admin dashboard built with React, Tailwind, and Chart.js to monitor sales, orders, and inventory in real-time.
+          </p>
+          <a href="#" class="text-blue-600 hover:underline">View Project</a>
+        </div>
 
-      <!-- Machine Learning -->
-      <div>
-        <h3 class="font-semibold text-xl mb-3">Machine Learning</h3>
-        <ul class="list-disc list-inside text-gray-700">
-          <li>TensorFlow & Keras</li>
-          <li>Scikit-learn</li>
-          <li>Pandas & NumPy</li>
-        </ul>
-      </div>
-
-      <!-- Soft Skills -->
-      <div>
-        <h3 class="font-semibold text-xl mb-3">Soft Skills</h3>
-        <ul class="list-disc list-inside text-gray-700">
-          <li>Agile & Solo Development</li>
-          <li>Problem Solving</li>
-          <li>Communication & Teamwork</li>
-          <li>Documentation & Research</li>
-        </ul>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-3xl font-bold mb-12 text-center">Skills</h2>
+
+      <div class="grid md:grid-cols-2 gap-10 text-lg">
+        <!-- Programming Languages -->
+        <div>
+          <h3 class="font-semibold text-xl mb-3">Programming Languages</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+
+        <!-- Frameworks & Tools -->
+        <div>
+          <h3 class="font-semibold text-xl mb-3">Frameworks & Tools</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Spring Boot & Hibernate</li>
+            <li>React & Tailwind CSS</li>
+            <li>PostgreSQL & MongoDB</li>
+            <li>Docker & Git</li>
+          </ul>
+        </div>
+
+        <!-- Machine Learning -->
+        <div>
+          <h3 class="font-semibold text-xl mb-3">Machine Learning</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>TensorFlow & Keras</li>
+            <li>Scikit-learn</li>
+            <li>Pandas & NumPy</li>
+          </ul>
+        </div>
+
+        <!-- Soft Skills -->
+        <div>
+          <h3 class="font-semibold text-xl mb-3">Soft Skills</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Agile & Solo Development</li>
+            <li>Problem Solving</li>
+            <li>Communication & Teamwork</li>
+            <li>Documentation & Research</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script to toggle mobile menu -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
